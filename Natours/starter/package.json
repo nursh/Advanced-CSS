@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "serve": "live-server",
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "compile:sass": "node-sass sass/main.scss css/style.css -w sass/"
   },
   "keywords": [],
   "author": "nur-sh",
