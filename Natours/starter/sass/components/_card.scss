@@ -75,7 +75,7 @@
   &__heading-span {
     padding: 1rem 1.5rem;
     -webkit-box-decoration-break: clone;
-    box-decoration-break: clone; // applies padding to a word that has been broken
+    box-decoration-break: clone; // applies padding to both parts of a word that has been broken
 
     &--1 {
       background-image: linear-gradient(
