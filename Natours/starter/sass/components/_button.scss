@@ -1,4 +1,5 @@
 .btn {
+  &,
   &:link,
   &:visited {
     text-decoration: none;
@@ -6,15 +7,18 @@
     padding: 1.5rem 4rem;
     display: inline-block;
     border-radius: 10rem;
-    transition: all .2s;
+    transition: all 0.2s;
     position: relative;
     font-size: $default-font-size;
+
+    // change for <button> element
+    border: none;
+    cursor: pointer;
   }
 
   &:hover {
-    transform: translateY(-.3rem);
+    transform: translateY(-0.3rem);
     box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
-
 
     &::after {
       transform: scaleX(1.4) scaleY(1.6);
@@ -22,9 +26,12 @@
     }
   }
 
-  &:active {
+  // The focus is for the button
+  &:active,
+  &:focus {
+    outline: none;
     transform: translateY(-1rem);
-    box-shadow: 0 .5rem 1rem rgba($color-black, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
   }
 
   &--white {
@@ -55,14 +62,13 @@
     top: 0;
     left: 0;
     z-index: -1;
-    transition: all .4s;
-
+    transition: all 0.4s;
   }
 
   &--animated {
-    animation: moveInBottom .5s ease-out .75s;
+    animation: moveInBottom 0.5s ease-out 0.75s;
     animation-fill-mode: backwards; /* Apply initial state of animation */
-  } 
+  }
 }
 
 .btn-text {
@@ -71,10 +77,10 @@
     font-size: $default-font-size;
     color: $color-primary;
     text-decoration: none;
-    border-bottom: .1rem solid $color-primary;
-    padding: .3rem;
+    border-bottom: 0.1rem solid $color-primary;
+    padding: 0.3rem;
     display: inline-block;
-    transition: all .2s
+    transition: all 0.2s;
   }
 
   &:hover {
@@ -85,7 +91,7 @@
   }
 
   &:active {
-    box-shadow: 0 .5rem 1rem rgba($color-black, 0.15);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
     transform: translate(0);
   }
 }
