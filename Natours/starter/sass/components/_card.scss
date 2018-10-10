@@ -2,12 +2,12 @@
   perspective: 150rem; // put perspective on the card, turns perfectly
   -moz-perspective: 150rem;
   position: relative;
-  height: 52rem; // This is important, because position collapses the height 
-                // and removes the perspective
+  height: 52rem; // This is important, because position collapses the height
+  // and removes the perspective
 
   &__side {
     height: 52rem;
-    transition: all .8s ease;
+    transition: all 0.8s ease;
     position: absolute;
     top: 0;
     left: 0;
@@ -50,11 +50,11 @@
     }
   }
 
-  &:hover &__side--front{
+  &:hover &__side--front {
     transform: rotateY(-180deg);
   }
 
-  &:hover &__side--back{
+  &:hover &__side--back {
     transform: rotateY(0deg);
   }
 
@@ -70,26 +70,29 @@
 
     &--1 {
       background-image: linear-gradient(
-        to right bottom,
-        $color-secondary-light,
-        $color-secondary-dark
-      ), url(../img/nat-5.jpg);
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        ),
+        url(../img/nat-5.jpg);
     }
 
     &--2 {
       background-image: linear-gradient(
-        to right bottom,
-        $color-primary-light,
-        $color-primary-dark
-      ), url(../img/nat-6.jpg);
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        ),
+        url(../img/nat-6.jpg);
     }
 
     &--3 {
       background-image: linear-gradient(
-        to right bottom,
-        $color-tertiary-light,
-        $color-tertiary-dark
-      ), url(../img/nat-7.jpg);
+          to right bottom,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        ),
+        url(../img/nat-7.jpg);
     }
   }
 
@@ -100,7 +103,7 @@
     color: $color-white;
     text-align: right;
     position: absolute;
-    top: 8rem;
+    top: 12rem;
     right: 2rem;
     width: 75%;
   }
@@ -142,7 +145,6 @@
     ul {
       list-style: none;
       width: 80%;
-      padding-left: 0;
       margin: 0 auto;
 
       li {
@@ -154,19 +156,18 @@
           border-bottom: 1px solid $color-grey-light-2;
         }
       }
-
     }
   }
 
   // Back-side styling
   // top, left, position and transform properties are for centering horizontal and vertical
   &__cta {
-    top: 50%;   
+    top: 50%;
     left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
     width: 90%;
-    text-align: center; // center button 
+    text-align: center; // center button
   }
 
   &__price-box {

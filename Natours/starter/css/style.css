@@ -29,7 +29,7 @@
     transform: translate(0); } }
 
 *,
-*::after
+*::after,
 *::before {
   margin: 0;
   padding: 0;
@@ -247,7 +247,7 @@ body {
   height: 52rem; }
   .card__side {
     height: 52rem;
-    transition: all .8s ease;
+    transition: all 0.8s ease;
     position: absolute;
     top: 0;
     left: 0;
@@ -291,7 +291,7 @@ body {
     color: #fff;
     text-align: right;
     position: absolute;
-    top: 8rem;
+    top: 12rem;
     right: 2rem;
     width: 75%; }
   .card__heading-span {
@@ -309,7 +309,6 @@ body {
     .card__details ul {
       list-style: none;
       width: 80%;
-      padding-left: 0;
       margin: 0 auto; }
       .card__details ul li {
         text-align: center;
@@ -384,10 +383,35 @@ body {
 .form__input {
   font-size: 1.5rem;
   font-family: inherit;
+  color: inherit;
   padding: 1.5rem 2rem;
   border-radius: 2px;
   background-color: rgba(255, 255, 255, 0.5);
-  border: none; }
+  border: none;
+  border-bottom: 3px solid transparent;
+  width: 90%;
+  display: block; }
+  .form__input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #55c57a; }
+  .form__input:focus:invalid {
+    border-bottom: 3px solid #ff7730; }
+  .form__input::-webkit-input-placeholder {
+    color: #999; }
+
+.form__label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: 0.7rem;
+  display: block;
+  transition: all 0.3s; }
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem); }
 
 .row {
   max-width: 114rem;
@@ -465,7 +489,7 @@ body {
 
 .book {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/nat-10.jpg);
-  background-size: cover;
+  background-size: 100%;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
   height: 50rem; }
