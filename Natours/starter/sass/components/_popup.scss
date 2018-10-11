@@ -7,7 +7,19 @@
   background-color: rgba($color-black, 0.9);
   z-index: 9999;
 
-  display: none;
+  // This just hides the element
+  opacity: 0;
+
+  // This takes the popup out of the page
+  visibility: hidden;
+
+  // animate opacity and visibility
+  transition: all .3s;
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
 
   &__content {
     @include absCenter;
