@@ -9,12 +9,10 @@
 
   // This just hides the element
   opacity: 0;
-
   // This takes the popup out of the page
   visibility: hidden;
-
   // animate opacity and visibility
-  transition: all .3s;
+  transition: all 0.3s;
 
   &:target {
     opacity: 1;
@@ -32,6 +30,17 @@
 
     // Hide overlapping image
     overflow: hidden;
+    opacity: 0;
+
+    // Repeating the translate because an element can't have 2 transforms
+    transform: translate(-50%, -50%) scale(0.25);
+    transition: all 0.5s 0.2s;
+  }
+
+  // Target the content after the popup has been opened
+  &:target &__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
   }
 
   &__left {
@@ -68,5 +77,24 @@
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto;
+  }
+
+  &__close {
+    &:link,
+    &:visited {
+      color: $color-grey-dark;
+      position: absolute;
+      top: 2.5rem;
+      right: 2.5rem;
+      font-size: 3rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.2s;
+      line-height: 1;
+    }
+
+    &:hover {
+      color: $color-primary;
+    }
   }
 }
