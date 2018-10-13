@@ -1,3 +1,21 @@
+/* 
+0 - 600px -> Phone
+600 - 900px -> Tablet portrait
+900 - 1200px -> Tablet landscape
+
+[1200 - 1800] -> where normal styles apply
+1800+ -> Big desktop
+*/
+/***
+  $breakpoint is an argument that accepts 
+  - phone
+  - tab-port
+  - tab-land
+  - big-desktop
+
+  max-width - means apply it to any screen less than the specified size
+  min-width - means apply it to any screen greater than the specified size
+***/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
