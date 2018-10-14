@@ -21,7 +21,7 @@
   transform: skewY(-7deg); // Makes the section tilt by -7degrees
 
   @include respond(tab-port) {
-    padding: 15rem 0;
+    padding: 10rem 0;
   }
 
   & > * {
