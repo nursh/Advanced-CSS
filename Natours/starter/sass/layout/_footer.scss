@@ -4,6 +4,10 @@
   font-size: 1.4rem;
   color: $color-grey-light-1;
 
+  @include respond(tab-port) {
+    padding: 8rem 0;
+  }
+
   &__logo-box {
     // Because the logo is an inline element
     text-align: center;
@@ -21,6 +25,11 @@
 
     // Make the navigation border-top the size of the navigation
     display: inline-block;
+
+    @include respond(tab-port) {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   &__list {
@@ -61,5 +70,11 @@
     padding-top: 2rem;
     width: 80%;
     float: right;
+
+    @include respond(tab-port) {
+      width: 100%;
+      text-align: center;
+      float: none;
+    }
   }
 }
