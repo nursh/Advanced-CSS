@@ -14,12 +14,20 @@
 }
 
 .content {
+  display: flex;
 }
 
 .sidebar {
   background-color: var(--color-grey-dark-1);
+
+  // adding width to flex item using flex-basis
+  // 1st 0 is flex-grow, 2nd 0 is flex-shrink, last percentage is flex-basis
+  flex: 0 0 18%;
 }
 
 .hotel-view {
   background-color: #fff;
+
+  // This items should take the width of the rest of the container
+  flex: 1;
 }
