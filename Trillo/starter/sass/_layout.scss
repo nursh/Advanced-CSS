@@ -27,11 +27,15 @@
   // adding width to flex item using flex-basis
   // 1st 0 is flex-grow, 2nd 0 is flex-shrink, last percentage is flex-basis
   flex: 0 0 18%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .hotel-view {
   background-color: #fff;
 
+  height: 80rem;
   // This items should take the width of the rest of the container
   flex: 1;
 }
