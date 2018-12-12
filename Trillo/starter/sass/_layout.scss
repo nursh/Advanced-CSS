@@ -34,13 +34,12 @@
 
 .hotel-view {
   background-color: #fff;
-
-  height: 80rem;
   // This items should take the width of the rest of the container
   flex: 1;
 }
 
 .detail {
+  font-size: 1.4rem;
   display: flex;
   padding: 4.5rem;
   background-color: var(--color-grey-light-1);
@@ -48,7 +47,6 @@
 }
 
 .description {
-  font-size: 1.4rem;
   background-color: #fff;
   box-shadow: var(--shadow-light);
   padding: 3rem;
@@ -58,4 +56,8 @@
 
 .user-reviews {
   flex: 1; // Occupy the remaining space
+
+  display: flex;
+  flex-direction: column;
+  align-items: center; // Default is stretch
 }
