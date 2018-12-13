@@ -368,9 +368,6 @@
     margin-right: auto; // move images to the right
   }
 
-  &__friends {
-  }
-
   &__photo {
     box-sizing: content-box; // make padding to be added on the images
     height: 4rem;
@@ -379,7 +376,7 @@
     border: 3px solid #fff;
 
     &:not(:last-child) {
-      margin-right: -1.5rem;
+      margin-right: -2rem;
     }
   }
 }
